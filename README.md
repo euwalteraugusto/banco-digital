@@ -77,7 +77,7 @@ banco_digital/
 ### 1. Clonar repositório
 
 ```bash
-git clone https://github.com/SEU_USUARIO/banco-digital.git
+git clone https://github.com/euwalteraugusto/banco-digital.git
 cd banco-digital
 ```
 
