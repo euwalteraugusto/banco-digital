@@ -1,7 +1,4 @@
-import sqlite3
-
 from database.connection import conectar
-from datetime import datetime
 
 def registrar_transacao(conta_id, tipo, valor):
     if valor <= 0:
@@ -10,7 +7,7 @@ def registrar_transacao(conta_id, tipo, valor):
     if tipo not in ["entrada", "saida"]:
         raise ValueError("Tipo inválido")
 
-    conn = sqlite3.connect("banco.db")
+    conn = conectar()
     cursor = conn.cursor()
 
     cursor.execute("""

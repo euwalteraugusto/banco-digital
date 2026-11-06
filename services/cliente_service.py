@@ -1,7 +1,7 @@
-import sqlite3
+from database.connection import conectar
 
 def criar_cliente(nome, cpf):
-    conn = sqlite3.connect("banco.db")
+    conn = conectar()
     cursor = conn.cursor()
 
     # 1. Verifica se já existe

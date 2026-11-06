@@ -1,9 +1,7 @@
-import sqlite3
-
-DB_PATH = "banco.db"
+from database.connection import conectar
 
 def init_db():
-    conn = sqlite3.connect(DB_PATH)
+    conn = conectar()
     cursor = conn.cursor()
 
     # Clientes
@@ -41,7 +39,7 @@ def init_db():
     conn.close()
     
 def seed_data():
-    conn = sqlite3.connect(DB_PATH)
+    conn = conectar()
     cursor = conn.cursor()
 
     # evita duplicação
