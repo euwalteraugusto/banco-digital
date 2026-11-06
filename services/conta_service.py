@@ -1,9 +1,7 @@
-import sqlite3
-
 from database.connection import conectar
 
 def criar_conta(cliente_id):
-    conn = sqlite3.connect("banco.db")
+    conn = conectar()
     cursor = conn.cursor()
 
     cursor.execute(
